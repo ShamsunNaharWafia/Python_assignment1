@@ -94,7 +94,7 @@ Each section includes detailed explanations, examples, and assignments.
 import csv
 import json
 
-csv=[]
+csv=[orange]
 
 with open('example.csv', 'w') as file:
    file.write("Hello, Python learners!\n")
@@ -104,13 +104,15 @@ with open('example.csv', 'r') as file:
     for row in reader:
         print(row)
 
-data = {"data": csv}
+data = {"data": "oranage"}
 
 with open('data.json', 'w') as file:
     json.dump(data, file)
 
 
 # Assignment 2: Create a log file writer that appends log messages to a file with timestamps.
+
+
 
 # Congratulations on completing the comprehensive section on Python file I/O and JSON handling!
 # Review the assignments, try to solve them, and check your understanding of file operations and data formats.
