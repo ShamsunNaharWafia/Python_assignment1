@@ -81,7 +81,9 @@ Each section includes detailed explanations, examples, and assignments.
 # Assignments
 # -----------
 # Assignment 1: Create a simple package with at least two modules, each containing one function.
-
+from Packages import module1, module2
+print(module1.name())
+print(module2.age())
 
 
 # Assignment 2: Use pip to install any library that is new to you and write a small script to explore its functionality.

@@ -137,11 +137,11 @@ tuple
 # Assignment 3: Create a list of tuples, where each tuple contains a student's name and their grade. Sort this list by grades.
 # Write your code below:
 
-tuple=(1,"wafia", 4.0)
-tuple=(2,"parul", 3.0)
-tuple=(3,"tahia", 3.5)
+list_tuple=[(1,"wafia", 4.0),
+(2,"parul", 3.0),
+(3,"tahia", 3.5)]
 
-sort_list = [x for x in tuple if x <= 4]
+sort_list = sorted(list_tuple,key=lambda x: x[1],reverse=True)
 print(sort_list)
 # Congratulations on completing the advanced section on Python lists and tuples!
 # Review the assignments, try to solve them, and check your understanding of these versatile data structures.

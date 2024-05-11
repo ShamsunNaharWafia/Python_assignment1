@@ -95,22 +95,39 @@ import csv
 import json
 
 
-with open('example.csv', 'w') as file:
-   file.write("Hello, Python learners!\n")
+def json_convert(csv_file, json_file):
+    student = []
+    with open('product.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Name", "Age"])
+        writer.writerow(["wafia", 25])
+        writer.writerow(["cat", 2])
+        writer.writerow(["victoria", 30])
+    
+    with open('product.csv', 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            student.append(row)
+            
+    with open('student.json', 'w') as file:
+        json.dump(student, file, indent=4)
 
-with open('example.csv', 'r') as file:
-    reader = csv.reader(file)
-    for row in reader:
-        print(row)
+json_convert('student.csv', 'student.json')
 
-data = {"data": csv}
-
-with open('data.json', 'w') as file:
-    json.dump(data, file)
 
 
 # Assignment 2: Create a log file writer that appends log messages to a file with timestamps.
+import datetime
 
+def w_log(message, log_file):
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_time = f"[{timestamp}] {message}\n"
+    
+    with open(log_file, 'a') as file:
+        file.write(log_time)
+
+w_log("log message", "log_msg.log")
 
 # Congratulations on completing the comprehensive section on Python file I/O and JSON handling!
 # Review the assignments, try to solve them, and check your understanding of file operations and data formats.
+

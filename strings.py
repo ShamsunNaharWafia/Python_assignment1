@@ -13,13 +13,13 @@ We will explore:
 Each section includes detailed explanations, examples, and challenging assignments.
 """
 
-# # Section 1: String Basics
-# # ------------------------
-# # Strings in Python are sequences of characters.
+# Section 1: String Basics
+# ------------------------
+# Strings in Python are sequences of characters.
 
-# # Example 1: Creating and Using Strings
+# Example 1: Creating and Using Strings
 # simple_string = "Hello, Python learners!"
-# # print(simple_string[0])  # Accessing the first character
+# print(simple_string[0])  # Accessing the first character
 
 # # Strings are immutable
 # # Trying to change a character directly will raise a TypeError
@@ -31,14 +31,14 @@ Each section includes detailed explanations, examples, and challenging assignmen
 
 # # Replacing substrings
 # modified_string = simple_string.replace('learners', 'developers')
-# # print("Modified String:", modified_string)
+# print("Modified String:", modified_string)
 
 # # Splitting strings
-# # print(simple_string)
+# print(simple_string)
 
 # marks = "80: 83: 70: 48: 47"
 # marks_list = marks.split(': ')  # Splits the string into a list of marks
-# # print("Array of marks:", marks_list)
+# print("Array of marks:", marks_list)
 
 # words = simple_string.split(',')  # Splits the string into a list of words
 # print("Array of words:", words)
@@ -88,9 +88,9 @@ print("Array of words:  ", splits)
 
 name = "cat"
 model = "Mustang"
-b_year = "4pm"
+time = "4pm"
 
-detail = f"customer {name} bought a {model} at {b_year}"
+detail = f"customer {name} bought a {model} at {time}"
 print(detail)
 
 
@@ -124,7 +124,20 @@ print(detail)
 # Assignment 3: Write a function that takes a string and returns a dictionary with the counts of each character in the string.
 # Write your code below:
 
-string ="i do  like programming"
+def count_characters(s):
+    
+    char_counts = {} #empty dictionary for counts store
+
+    for char in s:
+        if char in char_counts:
+            char_counts[char] += 1
+        else:
+            char_counts[char] = 1
+    return char_counts
+
+
+my_string ="i do not like programming"
+print(count_characters(my_string))
 
 # Section 4: Regular Expressions
 # ------------------------------
